@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohammed Imran Ammar — IT Support &amp; Operations</title>
+<meta name="description" content="Mohammed Imran Ammar, aspiring data analyst in Colombo, Sri Lanka. SQL, Python, and 3+ years of IT operations experience.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2714%27 fill=%27%2314201A%27/%3E%3Ctext x=%2750%27 y=%2768%27 font-size=%2760%27 font-family=%27sans-serif%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%238FE0B4%27%3EA%3C/text%3E%3C/svg%3E">
+<title>Mohammed Imran Ammar — Aspiring Data Analyst</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -20,63 +22,22 @@
     --amber-soft: #FAF0DF;
     --radius: 3px;
   }
-
   *{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
-
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
     *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
   }
-
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'IBM Plex Sans', sans-serif;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.5;
-  }
-
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; -webkit-font-smoothing:antialiased; line-height:1.5; }
   a{ color:inherit; }
-  a:focus-visible, button:focus-visible{
-    outline:2px solid var(--signal);
-    outline-offset:3px;
-  }
-
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--signal); outline-offset:3px; }
   .mono{ font-family:'IBM Plex Mono', monospace; }
+  .wrap{ max-width:920px; margin:0 auto; padding:0 28px; }
 
-  .wrap{
-    max-width:920px;
-    margin:0 auto;
-    padding:0 28px;
-  }
-
-  /* ---------- status bar ---------- */
-  .statusbar{
-    border-bottom:1px solid var(--line);
-    background:var(--panel);
-  }
-  .statusbar .wrap{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding-top:12px;
-    padding-bottom:12px;
-    font-size:12px;
-    letter-spacing:.04em;
-    color:var(--ink-soft);
-    flex-wrap:wrap;
-    gap:8px;
-  }
+  .statusbar{ border-bottom:1px solid var(--line); background:var(--panel); }
+  .statusbar .wrap{ display:flex; justify-content:space-between; align-items:center; padding-top:12px; padding-bottom:12px; font-size:12px; letter-spacing:.04em; color:var(--ink-soft); flex-wrap:wrap; gap:8px; }
   .status-live{ display:flex; align-items:center; gap:8px; }
-  .dot{
-    width:8px; height:8px; border-radius:50%;
-    background:var(--signal);
-    box-shadow:0 0 0 0 rgba(30,142,90,.5);
-    animation:pulse 2.2s infinite;
-    flex:none;
-  }
+  .dot{ width:8px; height:8px; border-radius:50%; background:var(--signal); box-shadow:0 0 0 0 rgba(30,142,90,.5); animation:pulse 2.2s infinite; flex:none; }
   @keyframes pulse{
     0%{ box-shadow:0 0 0 0 rgba(30,142,90,.45); }
     70%{ box-shadow:0 0 0 7px rgba(30,142,90,0); }
@@ -86,256 +47,86 @@
   .statusbar nav a{ text-decoration:none; color:var(--ink-soft); }
   .statusbar nav a:hover{ color:var(--ink); }
 
-  /* ---------- hero ---------- */
-  .hero{
-    padding:72px 0 56px;
-    border-bottom:1px solid var(--line);
-  }
-  .eyebrow{
-    font-size:12px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--signal);
-    margin:0 0 18px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:22px; height:1px;
-    background:var(--signal);
-    display:inline-block;
-  }
-  h1{
-    font-size:clamp(34px, 6vw, 56px);
-    line-height:1.03;
-    letter-spacing:-.01em;
-    margin:0 0 18px;
-    font-weight:700;
-  }
-  .hero p.lede{
-    max-width:58ch;
-    font-size:17px;
-    color:var(--ink-soft);
-    margin:0 0 32px;
-  }
+  .hero{ padding:72px 0 56px; border-bottom:1px solid var(--line); }
+  .eyebrow{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--signal); margin:0 0 18px; display:flex; align-items:center; gap:10px; }
+  .eyebrow::before{ content:""; width:22px; height:1px; background:var(--signal); display:inline-block; }
+  h1{ font-size:clamp(34px, 6vw, 56px); line-height:1.03; letter-spacing:-.01em; margin:0 0 18px; font-weight:700; }
+  .hero p.lede{ max-width:58ch; font-size:17px; color:var(--ink-soft); margin:0 0 32px; }
   .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:44px; }
-  .btn{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:13px;
-    text-decoration:none;
-    padding:11px 18px;
-    border-radius:var(--radius);
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    border:1px solid var(--ink);
-    transition:background .15s ease, color .15s ease;
-  }
+  .btn{ font-family:'IBM Plex Mono', monospace; font-size:13px; text-decoration:none; padding:11px 18px; border-radius:var(--radius); display:inline-flex; align-items:center; gap:8px; border:1px solid var(--ink); transition:background .15s ease, color .15s ease; }
   .btn.primary{ background:var(--ink); color:var(--paper); }
   .btn.primary:hover{ background:var(--signal); border-color:var(--signal); }
   .btn.ghost{ color:var(--ink); }
   .btn.ghost:hover{ background:var(--ink); color:var(--paper); }
 
-  .stat-strip{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    border-top:1px solid var(--line);
-    border-left:1px solid var(--line);
-  }
-  .stat{
-    border-right:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    padding:18px 20px;
-  }
+  .stat-strip{ display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+  .stat{ border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:18px 20px; }
   .stat .num{ font-size:26px; font-weight:700; }
-  .stat .label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin-top:4px;
-  }
+  .stat .label{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-soft); margin-top:4px; }
 
-  /* ---------- section shell ---------- */
   section{ padding:64px 0; border-bottom:1px solid var(--line); }
   section:last-of-type{ border-bottom:none; }
-  .section-head{
-    display:flex;
-    align-items:baseline;
-    justify-content:space-between;
-    margin-bottom:28px;
-    gap:16px;
-    flex-wrap:wrap;
-  }
-  .section-head h2{
-    font-size:22px;
-    margin:0;
-    font-weight:700;
-  }
-  .section-head .tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-    letter-spacing:.04em;
-  }
+  .section-head{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:28px; gap:16px; flex-wrap:wrap; }
+  .section-head h2{ font-size:22px; margin:0; font-weight:700; }
+  .section-head .tag{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft); letter-spacing:.04em; }
 
-  /* ---------- about ---------- */
   #about p{ max-width:64ch; color:var(--ink-soft); font-size:16px; }
-  #about strong{ color:var(--ink); }
 
-  /* ---------- skills panels ---------- */
-  .panels{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-  }
+  .panels{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
   .panel{ background:var(--panel); padding:22px; }
-  .panel h3{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:.06em;
-    color:var(--signal);
-    margin:0 0 14px;
-  }
+  .panel h3{ font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--signal); margin:0 0 14px; }
   .panel ul{ list-style:none; margin:0; padding:0; }
-  .panel li{
-    font-size:14.5px;
-    padding:6px 0;
-    border-top:1px dashed var(--line);
-    color:var(--ink-soft);
-  }
+  .panel li{ font-size:14.5px; padding:6px 0; border-top:1px dashed var(--line); color:var(--ink-soft); }
   .panel li:first-child{ border-top:none; }
 
-  /* ---------- ticket log (experience) ---------- */
-  .ticket{
-    border:1px solid var(--line);
-    background:var(--panel);
-    border-radius:var(--radius);
-    padding:22px 24px;
-    margin-bottom:16px;
-  }
-  .ticket-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:16px;
-    flex-wrap:wrap;
-    margin-bottom:10px;
-  }
-  .ticket-id{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-  }
-  .pill{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:.04em;
-    text-transform:uppercase;
-    padding:3px 9px;
-    border-radius:20px;
-    background:var(--signal-soft);
-    color:var(--signal);
-    white-space:nowrap;
-  }
+  .ticket{ border:1px solid var(--line); background:var(--panel); border-radius:var(--radius); padding:22px 24px; margin-bottom:16px; }
+  .ticket-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom:10px; }
+  .ticket-id{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft); }
+  .pill{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:20px; background:var(--signal-soft); color:var(--signal); white-space:nowrap; }
   .pill.current{ background:var(--amber-soft); color:var(--amber); }
   .ticket h3{ margin:2px 0 2px; font-size:17px; }
   .ticket .org{ font-size:14px; color:var(--ink-soft); margin-bottom:2px; }
-  .ticket .dates{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-    margin-bottom:14px;
-  }
+  .ticket .dates{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft); margin-bottom:14px; }
+  .ticket .path{ font-size:13.5px; color:var(--ink-soft); margin:-4px 0 14px; padding:8px 12px; background:var(--paper); border-left:2px solid var(--signal); }
   .ticket ul{ margin:0; padding-left:18px; color:var(--ink-soft); font-size:14.5px; }
   .ticket li{ margin-bottom:6px; }
   .ticket li::marker{ color:var(--signal); }
 
-  /* ---------- education / certs ---------- */
+  .project-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .project{ border:1px solid var(--line); background:var(--panel); border-radius:var(--radius); padding:22px 24px; display:flex; flex-direction:column; }
+  .project h3{ margin:0 0 4px; font-size:17px; }
+  .project .stack{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--signal); margin-bottom:12px; }
+  .project p{ margin:0 0 16px; font-size:14.5px; color:var(--ink-soft); flex:1; }
+  .project a{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; }
+
   .edu-grid{ display:grid; grid-template-columns:1fr 1fr; gap:32px; }
   .edu-item + .edu-item{ margin-top:22px; }
   .edu-item .deg{ font-weight:600; font-size:15.5px; }
   .edu-item .school{ color:var(--ink-soft); font-size:13.5px; }
   .edu-item .yrs{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--signal); }
-
   .cert-list{ list-style:none; margin:0; padding:0; }
-  .cert-list li{
-    font-size:14.5px;
-    padding:10px 0;
-    border-top:1px dashed var(--line);
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:var(--ink-soft);
-  }
+  .cert-list li{ font-size:14.5px; padding:10px 0; border-top:1px dashed var(--line); display:flex; align-items:center; gap:10px; color:var(--ink-soft); }
   .cert-list li:first-child{ border-top:none; }
-  .cert-list li::before{
-    content:"✓";
-    color:var(--signal);
-    font-family:'IBM Plex Mono', monospace;
-    font-weight:600;
-  }
+  .cert-list li::before{ content:"✓"; color:var(--signal); font-family:'IBM Plex Mono', monospace; font-weight:600; }
 
-  /* ---------- contact ---------- */
   #contact{ padding-bottom:80px; }
-  .contact-card{
-    background:var(--ink);
-    color:var(--paper);
-    border-radius:var(--radius);
-    padding:44px;
-  }
-  .contact-card .prompt{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:#8FE0B4;
-    margin-bottom:10px;
-  }
+  .contact-card{ background:var(--ink); color:var(--paper); border-radius:var(--radius); padding:44px; }
+  .contact-card .prompt{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:#8FE0B4; margin-bottom:10px; }
   .contact-card h2{ font-size:28px; margin:0 0 14px; }
   .contact-card p{ color:#C6D3CB; max-width:52ch; margin:0 0 28px; font-size:15px; }
-  .contact-links{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:1px;
-    background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.14);
-    border-radius:var(--radius);
-    overflow:hidden;
-  }
-  .contact-links a{
-    background:var(--ink);
-    padding:16px 18px;
-    text-decoration:none;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:13px;
-    display:flex;
-    flex-direction:column;
-    gap:4px;
-    transition:background .15s ease;
-  }
+  .contact-links{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.14); border-radius:var(--radius); overflow:hidden; }
+  .contact-links a{ background:var(--ink); padding:16px 18px; text-decoration:none; font-family:'IBM Plex Mono', monospace; font-size:13px; display:flex; flex-direction:column; gap:4px; transition:background .15s ease; }
   .contact-links a:hover{ background:#1E2F26; }
   .contact-links a .k{ color:#8FE0B4; font-size:11px; text-transform:uppercase; letter-spacing:.05em; }
   .contact-links a .v{ color:var(--paper); word-break:break-all; }
 
-  footer{
-    text-align:center;
-    padding:26px 0 40px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    color:var(--ink-soft);
-    letter-spacing:.03em;
-  }
+  footer{ text-align:center; padding:26px 0 40px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); letter-spacing:.03em; }
 
-  /* ---------- responsive ---------- */
   @media (max-width:760px){
     .panels{ grid-template-columns:1fr; }
     .stat-strip{ grid-template-columns:1fr; }
     .stat{ border-right:none; }
+    .project-grid{ grid-template-columns:1fr; }
     .edu-grid{ grid-template-columns:1fr; gap:8px; }
     .contact-links{ grid-template-columns:1fr; }
     .statusbar nav{ display:none; }
@@ -356,6 +147,7 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -363,25 +155,25 @@
 </div>
 
 <header class="hero wrap">
-  <p class="eyebrow">IT Support &amp; Operations</p>
+  <p class="eyebrow">Aspiring Data Analyst</p>
   <h1>Mohammed Imran Ammar.</h1>
-  <p class="lede">I keep hardware, software, and the people depending on them running — troubleshooting issues before they become outages, and coordinating the operational side that keeps a team moving.</p>
+  <p class="lede">I turn everyday operational data into decisions. Three years in IT operations taught me how systems and records really work, and now I'm building on that with SQL, Python and a BSc in Data Science.</p>
   <div class="hero-actions">
     <a class="btn primary" href="#contact">Get in touch</a>
     <a class="btn ghost" href="#experience">See experience</a>
   </div>
   <div class="stat-strip">
     <div class="stat">
-      <div class="num">2.5+</div>
-      <div class="label">Years in IT support &amp; ops</div>
-    </div>
-    <div class="stat">
-      <div class="num">5</div>
-      <div class="label">Roles held, 2023 – 2026</div>
+      <div class="num">3+</div>
+      <div class="label">Years in IT operations</div>
     </div>
     <div class="stat">
       <div class="num">3</div>
-      <div class="label">Languages — En / Ta / Si</div>
+      <div class="label">Promotions at SITC</div>
+    </div>
+    <div class="stat">
+      <div class="num">6</div>
+      <div class="label">People supervised</div>
     </div>
   </div>
 </header>
@@ -392,7 +184,7 @@
       <h2>About</h2>
       <span class="tag mono">// who's behind this</span>
     </div>
-    <p>I'm an IT and operations professional based in Colombo. Over the last two and a half years I've been the go-to person for day-to-day technical issues — hardware, software, user accounts — while also handling the administrative and project-coordination work that goes with running a team's systems. Most recently I've been leading hybrid projects that sit between IT and operations, keeping timelines, stakeholders, and troubleshooting all moving at once. Grounded in a Pearson BTEC HND in Software Engineering, with an Ethical Hacking certificate for the security side of things. I'm now studying for a BSc in Data Science and moving toward data analyst roles, using Python and SQL to turn operational data into decisions.</p>
+    <p>Aspiring data analyst with 3+ years of IT operations and administration experience. Promoted three times at SITC Campus, from IT Trainee to IT Administrative Officer, and supervised a team of 6. Currently studying for a BSc (Hons) in Data Science. Uses SQL and Python to automate data work, and as part-time Operations Manager at Bombay Chaiwala compares monthly sales to find weak spots and plan improvements. Adaptable, with good critical thinking, and comfortable working with both technical and non-technical teams.</p>
   </div>
 </section>
 
@@ -404,32 +196,30 @@
     </div>
     <div class="panels">
       <div class="panel">
-        <h3>Support</h3>
+        <h3>Data</h3>
         <ul>
-          <li>Hardware troubleshooting</li>
-          <li>Software troubleshooting</li>
-          <li>System maintenance</li>
-          <li>User account &amp; access admin</li>
-          <li>LAN / Wi-Fi &amp; endpoint setup</li>
+          <li>SQL</li>
+          <li>Python</li>
+          <li>Google Sheets</li>
+          <li>Data handling &amp; record keeping</li>
+          <li>Sales &amp; performance analysis</li>
+          <li>Power BI (learning)</li>
+          <li>Tableau (learning)</li>
         </ul>
       </div>
       <div class="panel">
-        <h3>Operations</h3>
+        <h3>Technical</h3>
         <ul>
-          <li>Project &amp; timeline coordination</li>
-          <li>IT asset management</li>
-          <li>Process improvement</li>
-          <li>Cross-functional coordination</li>
-          <li>Documentation &amp; reporting</li>
+          <li>IT support &amp; troubleshooting</li>
+          <li>C#, JavaScript, PHP (basic)</li>
         </ul>
       </div>
       <div class="panel">
-        <h3>Other</h3>
+        <h3>Professional</h3>
         <ul>
-          <li>Python, JavaScript, PHP &amp; SQL</li>
-          <li>Ethical hacking fundamentals</li>
-          <li>Social media analytics</li>
-          <li>Microsoft Office / Google Workspace</li>
+          <li>Critical thinking</li>
+          <li>Adaptability</li>
+          <li>Communication &amp; teamwork</li>
         </ul>
       </div>
     </div>
@@ -445,48 +235,17 @@
 
     <div class="ticket">
       <div class="ticket-top">
-        <span class="ticket-id mono">TCK-005</span>
+        <span class="ticket-id mono">TCK-003</span>
         <span class="pill current">In progress</span>
       </div>
-      <h3>Part-Time Manager</h3>
+      <h3>Part-Time Operations Manager</h3>
       <div class="org">Bombay Chaiwala Pvt Ltd · Colombo 03, Sri Lanka</div>
       <div class="dates mono">Jul 2026 — Present</div>
       <ul>
-        <li>Run daily shop operations on evening shifts, supervising staff and assigning tasks</li>
-        <li>Track stock levels and inventory records, and coordinate replenishment</li>
-        <li>Resolve day-to-day operational issues to keep service running smoothly</li>
-      </ul>
-    </div>
-
-    <div class="ticket">
-      <div class="ticket-top">
-        <span class="ticket-id mono">TCK-004</span>
-        <span class="pill">Resolved</span>
-      </div>
-      <h3>Hybrid Project Manager</h3>
-      <div class="org">Mishrawarna Pvt Ltd · Colombo 03, Sri Lanka</div>
-      <div class="dates mono">Jun 2026 — Sep 2026</div>
-      <ul>
-        <li>Led hybrid project teams across combined IT and operational initiatives</li>
-        <li>Coordinated technical and administrative stakeholders on a single timeline</li>
-        <li>Owned project timelines, resource allocation, and risk tracking</li>
-        <li>Acted as first-line troubleshooter for issues that come up mid-delivery</li>
-      </ul>
-    </div>
-
-    <div class="ticket">
-      <div class="ticket-top">
-        <span class="ticket-id mono">TCK-003</span>
-        <span class="pill">Resolved</span>
-      </div>
-      <h3>IT Operations &amp; Administrative Assistant</h3>
-      <div class="org">SITC Campus · Kandy, Sri Lanka</div>
-      <div class="dates mono">Nov 2023 — Apr 2026</div>
-      <ul>
-        <li>Hands-on IT support — hardware, software, user accounts — for staff and students over 2.5 years</li>
-        <li>Reduced downtime through prompt issue resolution</li>
-        <li>Maintained inventory records and coordinated equipment procurement &amp; repairs</li>
-        <li>Kept accurate, audit-ready records of IT assets and administrative processes</li>
+        <li>Compare monthly sales against the previous month to see what changed and why</li>
+        <li>Identify the lowest-selling items, work out likely causes and plan changes for next month</li>
+        <li>Track stock levels and inventory records so popular items stay available</li>
+        <li>Supervise evening shifts, assign tasks and resolve day-to-day issues</li>
       </ul>
     </div>
 
@@ -495,27 +254,59 @@
         <span class="ticket-id mono">TCK-002</span>
         <span class="pill">Resolved</span>
       </div>
-      <h3>Freelance Social Media Marketing</h3>
-      <div class="org">Dropex Holdings Private Limited · Colombo, Sri Lanka</div>
-      <div class="dates mono">Jul 2023 — Sep 2023</div>
+      <h3>Hybrid Project Manager</h3>
+      <div class="org">Mishrawarna Pvt Ltd · Colombo 03, Sri Lanka</div>
+      <div class="dates mono">Jun 2026 — Sep 2026</div>
       <ul>
-        <li>Planned and scheduled content across platforms on a consistent calendar</li>
-        <li>Tracked campaign performance and reported on strategy, contributing to increased engagement</li>
+        <li>Led hybrid IT and operations projects, tracking timelines, resources and risks</li>
+        <li>Prepared status reports for stakeholders and clients</li>
+        <li>Introduced digital process changes that improved daily efficiency</li>
+        <li>Resolved IT and operational issues during delivery to avoid delays</li>
       </ul>
     </div>
+
+
 
     <div class="ticket">
       <div class="ticket-top">
         <span class="ticket-id mono">TCK-001</span>
         <span class="pill">Resolved</span>
       </div>
-      <h3>Retail Cashier</h3>
-      <div class="org">Mahajan Group of Companies · Kandy, Sri Lanka</div>
-      <div class="dates mono">Apr 2023 — Jun 2023</div>
+      <h3>IT Administrative Officer</h3>
+      <div class="org">SITC Campus · Gampola, Kandy</div>
+      <div class="dates mono">Nov 2022 — Apr 2026</div>
+      <div class="path">IT Trainee → IT Assistant (May 2023) → IT Administrative Assistant (Nov 2023) → IT Administrative Officer (Nov 2024). Held alongside full-time HND studies.</div>
       <ul>
-        <li>Processed customer transactions accurately in a fast-paced, customer-facing role</li>
-        <li>Supported daily retail operations and stock management</li>
+        <li>Gave hands-on IT support to staff and students, reducing downtime</li>
+        <li>Maintained IT asset and inventory records; coordinated procurement, repairs and maintenance</li>
+        <li>Supervised a team of 6 that checked student certificates and transcripts for accuracy and made sure each one reached the right student</li>
+        <li>Kept organised records of assignment submissions so each piece of work reached the correct lecturer</li>
+        <li>Maintained accurate, audit-ready student and administrative records</li>
+        <li>Used Python and SQL to automate repetitive data and admin tasks, saving the team manual effort</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <span class="tag mono">// things I've built</span>
+    </div>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Student Registration System</h3>
+        <div class="stack">C# · SQL</div>
+        <p>A student management app built in Visual Studio with Login, Sign Up and Registration forms, backed by a SQL database.</p>
+        <a href="https://github.com/AmmarrImran" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Bus Ticket Generator</h3>
+        <div class="stack">Python</div>
+        <p>A Python program modelled on Sri Lankan bus ticket machines. Users pick a bus and destination to generate a ticket.</p>
+        <a href="https://github.com/AmmarrImran" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
     </div>
   </div>
 </section>
@@ -534,7 +325,7 @@
           <div class="yrs">2026 — Present</div>
         </div>
         <div class="edu-item">
-          <div class="deg">Pearson BTEC HND in Computing — Software Engineering</div>
+          <div class="deg">Pearson BTEC HND in Software Engineering</div>
           <div class="school">Esoft Metro Campus, Kandy</div>
           <div class="yrs">2023 — 2025</div>
         </div>
@@ -551,7 +342,7 @@
       </div>
       <ul class="cert-list">
         <li>Certificate in Ethical Hacking</li>
-        <li>Certificate in Python Programming</li>
+        <li>Certificate in Python</li>
         <li>Certificate in Information Technology</li>
       </ul>
     </div>
@@ -563,7 +354,7 @@
     <div class="contact-card">
       <div class="prompt mono">$ status --contact</div>
       <h2>Let's work together.</h2>
-      <p>Open to IT operations, technical support, project coordination, and data analyst roles. I usually reply within a day.</p>
+      <p>I'm looking for a data analytics internship or job. I usually reply within a day.</p>
       <div class="contact-links">
         <a href="mailto:ammarimransignin@gmail.com">
           <span class="k">Email</span>
@@ -573,9 +364,9 @@
           <span class="k">Phone</span>
           <span class="v">+94 77 940 2287</span>
         </a>
-        <a href="https://www.linkedin.com/in/ammar-imran-885644245/" target="_blank" rel="noopener">
+        <a href="https://www.linkedin.com/in/imran-ammar-885644245" target="_blank" rel="noopener">
           <span class="k">LinkedIn</span>
-          <span class="v">/ammar-imran</span>
+          <span class="v">/imran-ammar</span>
         </a>
         <a href="https://github.com/AmmarrImran" target="_blank" rel="noopener">
           <span class="k">GitHub</span>
@@ -586,7 +377,7 @@
   </div>
 </section>
 
-<footer>Mohammed Imran Ammar — Colombo, Sri Lanka</footer>
+<footer>Mohammed Imran Ammar — Colombo, Sri Lanka · References available upon request</footer>
 
 </body>
 </html>
